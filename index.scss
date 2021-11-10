@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+:root {
+  --primary-text: #ffab4c;
+  --dark-bg10: #181d31;
+  --dark-bg8: #082032;
+  --dark-bg7: #334756;
+  --dark-bg6: #2c394b;
+
+  --light-text1: #e6ddc4;
+  --light-text2: #f0e9d2;
+
+  --yellow1: #ffd07f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Roboto", sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 900px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Navbar */
+header {
+  background-color: var(--dark-bg10);
+  padding: 30px 10px;
+}
+
+nav.container {
+  padding: 20px 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h2 {
+    color: var(--primary-text);
+  }
+
+  ul {
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      color: var(--light-text2);
+    }
+  }
+}
+
+/* Introduction */
+.intro-section {
+  background-color: var(--light-text1);
+  padding: 80px 10px;
+
+  color: var(--dark-bg10);
+
+  p {
+    margin-top: 50px;
+    font-size: 25px;
+  }
+}
+
+/* Blog-section */
+.blog-section {
+  background-color: var(--dark-bg8);
+  padding: 30px 10px;
+}
+
+.blog-card {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  column-gap: 15px;
+
+  align-content: center;
+
+  background-color: var(--dark-bg6);
+
+  margin: 30px auto;
+
+  border: none;
+  border-radius: 10px;
+
+  .image-wrapper {
+    width: 100%;
+    padding: 10px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+    position: center;
+
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+    height: 100%;
+
+    h4 {
+      color: var(--light-text2);
+    }
+
+    .underline {
+      height: 2px;
+      background-color: var(--primary-text);
+
+      margin: 10px 0px;
+      margin-right: 20px;
+    }
+
+    p {
+      color: var(--light-text2);
+      margin-right: 20px;
+    }
+  }
+}
+
+.view-button {
+  display: block;
+  width: 60px;
+
+  text-align: center;
+  font-weight: bold;
+
+  color: var(--dark-bg10);
+  background-color: var(--primary-text);
+
+  margin-bottom: 0;
+  margin-top: auto;
+
+  padding: 10px 10px;
+
+  border: none;
+  border-radius: 5px;
+}
+
+/* MVBlog-section */
+.mvblog-section .container {
+  max-width: 1200px;
+}
+
+.mvblog-section {
+  background-color: var(--dark-bg7);
+
+  padding: 50px 10px;
+
+  h2 {
+    color: var(--primary-text);
+    font-size: 30px;
+
+    text-align: center;
+  }
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  padding: 50px 0px;
+}
+
+.mvcard {
+  width: 80%;
+  margin: auto;
+  border-radius: 10px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+    position: center;
+
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+  }
+
+  .card-body {
+    background-color: var(--yellow1);
+    padding: 10px;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+
+    h4 {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+    .view-button {
+      background-color: var(--dark-bg7);
+      color: var(--light-text1);
+
+      margin-top: 20px;
+    }
+  }
+}
+
+/* Footer */
+
+@media screen and (max-width: 950px) {
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .blog-section {
+    .blog-card {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+
+      align-content: center;
+
+      background-color: var(--dark-bg6);
+
+      margin: 30px auto;
+
+      border: none;
+      border-radius: 10px;
+
+      .image-wrapper {
+        width: 100%;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: 220px;
+
+        object-fit: cover;
+        position: center;
+
+        border-radius: 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      .card-body {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-top: 10px;
+
+        p {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+}
